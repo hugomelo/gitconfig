@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# http://vim.wikia.com/wiki/Restore_state_of_edited_files_when_reopened
+
+if [ -r ~/.vim/session/$1.session ]; then
+vim "+source ~/.vim/session/$1.session" "+rviminfo ~/.vim/session/$1.viminfo"
+else
+vim $1
+fi
