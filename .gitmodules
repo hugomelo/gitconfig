@@ -2,5 +2,5 @@
 	path = configs/.vim
 	url = git://github.com/brauliobo/vimfiles.git
 [submodule ".zprezto"]
-	path = .zprezto
+	path = configs/.zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
