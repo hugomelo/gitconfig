@@ -1,11 +1,11 @@
 [user]
-  email = brauliobo@gmail.com
-  name = Braulio Bhavamitra
+  email = hugo@riseup.net
+  name = Hugo Melo
 
 [sendemail]
   smtpencryption = tls
   smtpserver = smtp.gmail.com
-  smtpuser = brauliobo@gmail.com
+  smtpuser = hugo.melo@gmail.com
   smtpserverport = 587
 
 [apply]
@@ -13,16 +13,13 @@
   whitespace = nowarn
 
 [push]
-  default = upstream
+	default = matching
 
 [alias]
   root = rev-parse --show-toplevel
-  #cdroot = !cd `git root`
+    #cdroot = !cd `git root`
 
-  upstream = !git for-each-ref --format='%(upstream:short)' $(git symbolic-ref -q HEAD)
-  upstream-remote = !git upstream | sed -e 's/\\/.*$//g'
-
-  out = !git fetch `git upstream-remote` && git l `git upstream`..HEAD
+  out = log --branches --not --remotes
   in = pull --dry-run
 
   co = checkout
@@ -61,7 +58,6 @@
   ds = diff --color --staged
   dsf = diff --color --staged --name-only
   df = diff --color --name-only
-  dc = "!f() { HASH=$1; shift 1; git d --cc $HASH $HASH^1 $HASH^2 $@; }; f"
 
   f = fetch
   fa = fetch --all
@@ -71,7 +67,7 @@
   unm = reset --merge
 
   ps = push
-  psu = push -u
+  fps = ftp push
   psf = push -f
   pso = push origin
   pssm = push --recurse-submodules=on-demand
@@ -165,7 +161,7 @@
   br = branch
   brt = branch --track
   brup = branch --set-upstream
-  bra = !git branch -a | less -FiRS
+  bra = branch -a
   brar = "!f() { git bra | grep remotes/$1/ | cut -f 3 -d '/'; }; f"
   brd = branch -D
   brc = branch --contains
@@ -210,11 +206,9 @@
   status = true
 
 [core]
-  pager = less -FiRS
+  pager = less -iRS
 
 [pager]
-  diff = true
-  status = true
   show-branch = true
 
 [mergetool "vimdiff3"]
