@@ -1,6 +1,6 @@
 [submodule "configs/.vim"]
 	path = configs/.vim
-	url = git://github.com/hugomelo/vimfiles.git
+	url = https://hugomelo@github.com/hugomelo/vimfiles.git
 [submodule ".zprezto"]
 	path = configs/.zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
