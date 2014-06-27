@@ -181,6 +181,7 @@
   smu = submodule update
   smui = submodule update --init
   smuir = submodule update --init --recursive
+  smd = submodule deinit
   sms = submodule sync
 
   bl = blame
