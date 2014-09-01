@@ -64,6 +64,7 @@
   fo = fetch origin
 
   m = merge
+  ma = merge --abort
   unm = reset --merge
 
   ps = push
@@ -97,6 +98,7 @@
   ig-untracked = !git ignore `git untracked`
   gitignore = !cd `git root` && touch .gitignore
 
+  authors = git shortlog  --numbered --summary 
   lp = log -p --color
   lf = log -p --name-only --color
   lnom = log --color --no-merges
@@ -183,6 +185,7 @@
   smuir = submodule update --init --recursive
   smd = submodule deinit
   sms = submodule sync
+  smpl = submodule foreach git pull origin master
 
   bl = blame
 
