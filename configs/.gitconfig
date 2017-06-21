@@ -58,6 +58,7 @@
   ds = diff --color --staged
   dsf = diff --color --staged --name-only
   df = diff --color --name-only
+  dl = diff --stat HEAD~1
 
   f = fetch
   fa = fetch --all
@@ -211,6 +212,7 @@
 
 [core]
   pager = less -iRS
+	excludesfile = /home/hugo/.gitignore_global
 
 [pager]
   show-branch = true
