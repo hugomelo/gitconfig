@@ -3,4 +3,4 @@
 	url = https://hugomelo@github.com/hugomelo/vimfiles.git
 [submodule ".zprezto"]
 	path = configs/.zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
+	url = https://github.com/hugomelo/prezto.git
