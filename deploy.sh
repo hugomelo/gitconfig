@@ -31,22 +31,8 @@ source $GITROOT/default/config
 
 echo == Update submodules
 git smuir --quiet
-cd configs/.vim && git pull git://github.com/akitaonrails/vimfiles.git master
-cd - >/dev/null
-
-echo == Install RVM
-if [[ ! -x $HOME/.rvm ]]; then
-	curl -#L https://get.rvm.io | bash -s stable
-fi
-echo == Install Oh my ZSH
-if [[ ! -x $HOME/.oh-my-zsh ]]; then
-	wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-fi
 
 echo == Add autoload configs code
-if ! grep zshmine.sh $HOME/.zshrc > /dev/null; then
-    echo '. $HOME/.zshmine.sh' >> ~/.zshrc
-fi
 if ! grep bashmine.sh $HOME/.bashrc > /dev/null; then
 	echo '. $HOME/.bashmine.sh' >> ~/.bashrc
 	echo '. $HOME/.bashmine.sh' >> ~/.bash_profile

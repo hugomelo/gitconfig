@@ -40,5 +40,6 @@ export TERM="xterm-256color"
 
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 #rvm 2.3.1@cirandas
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 alias rbenv-update='cd ~/.rbenv/plugins/ruby-build/ && git pull'
