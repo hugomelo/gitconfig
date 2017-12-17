@@ -26,3 +26,5 @@ bindkey ';5D' emacs-backward-word
 bindkey ';5C' emacs-forward-word
 
 alias mplayer=mpv
+
+export PATH="$HOME/.yarn/bin:$PATH"
