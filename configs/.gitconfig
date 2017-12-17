@@ -211,8 +211,9 @@
   status = true
 
 [core]
-  pager = less -iRS
-	excludesfile = /home/hugo/.gitignore_global
+  mergeoptions = --no-edit
+  pager = less -FiR # -F is necessary but has problems with tmux and regular shells
+  excludesfile = /home/hugo/.gitignore
 
 [pager]
   show-branch = true
