@@ -12,6 +12,9 @@ export HISTTIMEFORMAT='%m%d %H%M: '
 
 export EDITOR=vim
 
+export PAGER=less
+export LESS="-iMSx4 -FX"
+
 alias ls="ls --color=always"
 alias ltra="ls -ltra" # list the last modified files
 alias g=git
@@ -21,8 +24,6 @@ alias ack="ack-grep"
 alias skype2="nohup skype --dbpath=~/.Skype2/ > /dev/null"
 alias node=nodejs
 alias top=htop
-
-alias promote="heroku pipelines:promote --app ecocompanion-www-staging"
 
 alias be="bundle exec"
 
@@ -43,3 +44,5 @@ export TERM="xterm-256color"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 alias rbenv-update='cd ~/.rbenv/plugins/ruby-build/ && git pull'
+
+source ~/git/olery/env.sh
