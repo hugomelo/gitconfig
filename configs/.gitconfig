@@ -1,5 +1,5 @@
 [user]
-  email = hugo@riseup.net
+	email = hugomelo@olery.com
   name = Hugo Melo
 
 [sendemail]
@@ -13,7 +13,7 @@
   whitespace = nowarn
 
 [push]
-	default = matching
+	default = current
 
 [alias]
   root = rev-parse --show-toplevel
@@ -78,7 +78,7 @@
   pl = pull
   plo = pull origin
   plom = pull origin master
-  plr = pull --rebase
+  plr = !git sh && git pull --rebase && git shp
 
   st = status
 
@@ -121,6 +121,8 @@
   pa = apply
 
   sh = stash
+  shp = stash pop
+  shd = stash drop
   sha = stash apply
   shl = stash list
   shc = stash clear
@@ -163,7 +165,7 @@
   current = rev-parse --abbrev-ref HEAD
   br = branch
   brt = branch --track
-  brup = branch --set-upstream
+  brup = branch --set-upstream-to
   bra = branch -a
   brar = "!f() { git bra | grep remotes/$1/ | cut -f 3 -d '/'; }; f"
   brd = branch -D
@@ -211,12 +213,17 @@
   status = true
 
 [core]
-  mergeoptions = --no-edit
-  pager = less -FiR # -F is necessary but has problems with tmux and regular shells
-  excludesfile = /home/hugo/.gitignore
+  pager = less -iRS
+  #excludesfile = lib/fusion.rb
+	autocrlf = false
+	excludesfile = /home/hugo/.gitignore
 
 [pager]
   show-branch = true
 
 [mergetool "vimdiff3"]
   cmd = vim -u ~/.vimrc -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[pull]
+	rebase = false
+[url "git@github.com:"]
+	insteadOf = git://github.com/
