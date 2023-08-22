@@ -22,20 +22,35 @@ alias coletivo="ssh -C coletivo@bhakta.prout.io -p224"
 alias lock="gnome-screensaver-command -l"
 alias ack="ack-grep"
 alias skype2="nohup skype --dbpath=~/.Skype2/ > /dev/null"
-alias node=nodejs
 alias top=htop
 
 alias be="bundle exec"
 
 alias tmux="tmux -2"
 
+alias please=sudo
+
+alias dmesg="sudo dmesg -T"
+
 alias suspend="dbus-send --system --print-reply --dest='org.freedesktop.UPower' /org/freedesktop/UPower org.freedesktop.UPower.Suspend "
+
+alias yay='yay --answerdiff  None --answerclean None --answeredit None --noconfirm'
+
+alias remove_br="sed ':a;N;$!ba;s/\n/\, /g'"
+
+#alias authy='/usr/bin/electron --app /usr/lib/authy/app.asar'
+
+#alias java="java -Dsun.java2d.uiScale=1.4"
+#export GDK_SCALE=1.4
+#alias zoom="QT_SCALE_FACTOR=1.4 zoom"
+#export QT_SCALE_FACTOR=1.4
 
 #export GEM_HOME=/home/hugo/.gem/
 
-PATH=$PATH:/sbin:/usr/sbin:~/scripts:/home/hugo/git/sarava/keyringer
+PATH=$PATH:/sbin:/usr/sbin:~/scripts
 
 export PATH=${PATH}:/home/hugo/sdk/platform-tools:/home/hugo/sdk/tools
+export NODE_PATH='/usr/local/lib/node_modules:node_modules'
 
 export TERM="xterm-256color"
 
