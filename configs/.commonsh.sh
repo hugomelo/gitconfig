@@ -61,3 +61,4 @@ eval "$(rbenv init -)"
 alias rbenv-update='cd ~/.rbenv/plugins/ruby-build/ && git pull'
 
 source ~/git/olery/env.sh
+source ~/git/ym/env.sh
